@@ -1,9 +1,9 @@
-add_llvm_component_library(LLVMH2BLBDesc
-  H2BLBMCTargetDesc.cpp
+add_llvm_component_library(LLVMH2BLBDesc # <-- LLVM macro assumes this starts with LLVM
+    H2BLBMCTargetDesc.cpp
+    
+    LINK_COMPONENTS
+    Support
 
-  LINK_COMPONENTS
-  Support
-
-  ADD_TO_COMPONENT
-  H2BLB
-  )
+    ADD_TO_COMPONENT
+    H2BLB
+    )
